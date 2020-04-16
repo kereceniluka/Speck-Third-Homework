@@ -1,0 +1,56 @@
+.SectionMore {
+    width: 100%;
+
+    &-Inner {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    &-ContainerDescription {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-About {
+        margin: 50px 0;
+        text-align: justify;
+        font-weight: bold;
+    }
+    
+    &-Cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 20px;
+        margin: 80px 0;
+    }
+
+    @media screen and (max-width: 1200px) {
+        &-ContainerDescription {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        &-Cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        &-Cards {
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+            gap: 30px 0;
+        }
+    }
+}
