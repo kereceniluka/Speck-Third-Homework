@@ -7,7 +7,7 @@
     background-size: cover;
     background-blend-mode: multiply;
 
-    &-Container {
+    &__Container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -20,19 +20,19 @@
         padding: 25px;
     }
 
-    &-Title {
+    &__Title {
         text-align: center;
         font-size: 30px;
         color: #fff;
     }
 
-    &-Organizer {
+    &__Organizer {
         text-align: center;
         font-size: 30px;
         color: #c59613;
     }
     
-    &-Date {
+    &__Date {
         text-align: center;
         font-size: 25px;
         color: #fff;

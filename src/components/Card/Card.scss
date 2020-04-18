@@ -8,14 +8,14 @@
     border-radius: 15px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-    &-Image {
+    &__Image {
         width: 90%;
         height: 160px;
         object-fit: cover;
         object-position: center;
     }
 
-    &-Title {
+    &__Title {
         font-size: 22px;
         font-weight: bold;
     }
@@ -27,7 +27,7 @@
             justify-content: space-around;
         }
     
-        &-Image {
+        &__Image {
             height: 200px;
         }
     }

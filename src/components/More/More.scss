@@ -1,7 +1,7 @@
 .SectionMore {
     width: 100%;
 
-    &-Inner {
+    &__Inner {
         width: 80%;
         display: flex;
         flex-direction: column;
@@ -10,7 +10,7 @@
         margin: 0 auto;
     }
 
-    &-ContainerDescription {
+    &__ContainerDescription {
         width: 70%;
         display: flex;
         flex-direction: column;
@@ -18,13 +18,13 @@
         align-items: center;
     }
 
-    &-About {
+    &__About {
         margin: 50px 0;
         text-align: justify;
         font-weight: bold;
     }
     
-    &-Cards {
+    &__Cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 0 20px;
@@ -32,7 +32,7 @@
     }
 
     @media screen and (max-width: 1200px) {
-        &-ContainerDescription {
+        &__ContainerDescription {
             width: 90%;
             display: flex;
             flex-direction: column;
@@ -40,14 +40,14 @@
             align-items: center;
         }
     
-        &-Cards {
+        &__Cards {
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
         }
     }
     
     @media screen and (max-width: 768px) {
-        &-Cards {
+        &__Cards {
             grid-template-columns: repeat(1, 1fr);
             justify-items: center;
             gap: 30px 0;
