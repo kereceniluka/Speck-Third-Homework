@@ -1,0 +1,97 @@
+.InfoBox {
+    background: #efefef;
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    &__Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ffffff;
+        padding: 10px 0;
+    }
+
+    &__Icon {
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+
+        &_Type-Event {
+            width: 25px;
+            height: 25px;
+            background: url(../../assets/img/event-icon.png) no-repeat;
+            background-size: contain;
+        }
+        
+        &_Type-Speaker {
+            width: 25px;
+            height: 25px;
+            background: url(../../assets/img/speakers-icon.png) no-repeat;
+            
+        }
+    }
+
+    &__Title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /* EVENT CARD */
+
+    &__Information {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__Information-Inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    &__Information-Icon {
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+
+        &_Location {
+            background: url(../../assets/img/location-icon.png) no-repeat;
+            background-size: contain;
+        }
+        
+        &_Time {
+            background: url(../../assets/img/time-icon.png) no-repeat;
+            background-size: contain;
+        }
+    }
+
+    /* SPEAKER CARD */
+
+    &__About {
+        padding: 10px 0;
+        font-size: 15px;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        text-align: center;
+    }
+
+    &__Footer {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    &__Btn-Join {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+        transition: color 0.3s ease-out;
+
+        &:hover {
+            cursor: pointer;
+            color: #58a510;
+        }
+    }
+}

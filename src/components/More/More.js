@@ -15,9 +15,9 @@ import Partner from '../../assets/img/partner.jpg';
 const More = () => {
     return (
         <section className="SectionMore">
-            <div className="SectionMore-Inner">
-                <div className="SectionMore-ContainerDescription">
-                    <p className="SectionMore-About">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <div className="SectionMore__Inner">
+                <div className="SectionMore__ContainerDescription">
+                    <p className="SectionMore__About">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Eius maxime natus, qui doloremque aliquid labore corporis 
                     modi non amet repellat expedita fugiat eum, aut libero totam 
                     veniam sed ullam ut tenetur. Impedit ut doloribus perferendis 
@@ -28,7 +28,7 @@ const More = () => {
                     dolores vero sed.</p>
                     <Link className="Btn">Saznaj više</Link>
                 </div>
-                <div className="SectionMore-Cards">
+                <div className="SectionMore__Cards">
                     <Card image={About} altText="About">O tjednu karijera</Card>
                     <Card image={Speakers} altText="Speakers">Izlagači</Card>
                     <Card image={Calendar} altText="Calendar">Raspored događanja</Card>

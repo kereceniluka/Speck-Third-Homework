@@ -5,7 +5,7 @@ import './Header.scss';
 
 const links = {
     speakers: 'Sudionici',
-    events: 'Događanja',
+    events: 'Događaji',
     contact: 'Kontakt',
     sign_in: 'Prijavi se'
 }
@@ -15,21 +15,21 @@ const Header = () => {
         <header className="HeaderMain">
             <div className="HeaderMain__Inner">
                 <Link to="/" className="LogoContainer">
-                    <img className="LogoContainer-Image" src={Logo} alt="Logo"/>
+                    <img className="LogoContainer__Image" src={Logo} alt="Logo"/>
                 </Link>
-                <nav className="HeaderMain-Nav">
-                    <ul className="HeaderMain-NavList">
-                        <li className="HeaderMain-NavListItem">
-                            <Link className="HeaderMain-NavLink" to="/speakers">{links.speakers}</Link>
+                <nav className="HeaderMain__Nav">
+                    <ul className="HeaderMain__NavList">
+                        <li className="HeaderMain__NavListItem">
+                            <Link className="HeaderMain__NavLink" to="/speakers">{links.speakers}</Link>
                         </li>
-                        <li className="HeaderMain-NavListItem">
-                            <Link className="HeaderMain-NavLink" to="/events">{links.events}</Link>
+                        <li className="HeaderMain__NavListItem">
+                            <Link className="HeaderMain__NavLink" to="/events">{links.events}</Link>
                         </li>
-                        <li className="HeaderMain-NavListItem">
-                            <Link className="HeaderMain-NavLink" to="/contact">{links.contact}</Link>
+                        <li className="HeaderMain__NavListItem">
+                            <Link className="HeaderMain__NavLink" to="/contact">{links.contact}</Link>
                         </li>
-                        <li className="HeaderMain-NavListItem">
-                            <Link className="HeaderMain-NavLink" to="/sign-in">{links.sign_in}</Link>
+                        <li className="HeaderMain__NavListItem">
+                            <Link className="HeaderMain__NavLink" to="/sign-in">{links.sign_in}</Link>
                         </li>
                     </ul>
                 </nav>
