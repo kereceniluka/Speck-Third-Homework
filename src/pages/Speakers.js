@@ -17,6 +17,7 @@ const Speakers = () => {
             <h1 className="PageTitle">Sudionici</h1>
             <CardsGrid>
                 {speakers.map(speaker => <InfoBox
+                                            key={speaker.id}
                                             isTypeEvent={false}
                                             icon={speakersIcon} 
                                             title={speaker.title}

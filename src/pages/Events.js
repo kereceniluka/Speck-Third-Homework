@@ -16,6 +16,7 @@ const Events = () => {
             <h1 className="PageTitle">Događaji</h1>
             <CardsGrid>
                 {events.map(event => <InfoBox
+                                        key={event.id}
                                         isTypeEvent={true}
                                         icon={eventIcon}
                                         title={event.title} 
