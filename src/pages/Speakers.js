@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { PageTitle } from '../lib/styles/GeneralStyles';
 
 // Components
 import CardsGrid from '../components/CardsGrid/CardsGrid';
@@ -10,7 +11,7 @@ import SearchBar from '../components/SearchBar/SearchBar';
 import speakersIcon from '../assets/img/speakers-icon.png';
 
 // Data
-import speakersData from '../lib/speakers';
+import speakersData from '../lib/mock/speakers';
 
 
 const Speakers = () => {
@@ -42,8 +43,8 @@ const Speakers = () => {
 
     return (
         <>
-            <h1 className="PageTitle">Sudionici</h1>
-            <SearchBar searchType="Search speakers..." onInputChange={searchInputHandler} /> 
+            <PageTitle>Sudionici</PageTitle>
+            <SearchBar searchType="Search speakers..." onInputChange={searchInputHandler} isDisabled={speakers.length === 0 ? true : false} /> 
             {speakers.length === 0 ? <Loader /> : <CardsGrid>{speakerCards}</CardsGrid>}
         </>
     );

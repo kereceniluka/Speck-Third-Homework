@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { PageTitle } from '../lib/styles/GeneralStyles';
 
 // Components
 import CardsGrid from '../components/CardsGrid/CardsGrid';
@@ -10,7 +11,7 @@ import Loader from '../components/LoadingIcon/LoadingIcon';
 import eventIcon from '../assets/img/event-icon.png';
 
 // Data
-import eventsData from '../lib/events';
+import eventsData from '../lib/mock/events';
 
 const Events = () => {
 
@@ -25,7 +26,7 @@ const Events = () => {
     }, []);
 
 
-    const searchInputHandler = e => {
+    const searchInputHandler = e => {                        
         setSearch(e.target.value);
     }
 
@@ -44,8 +45,8 @@ const Events = () => {
 
     return (
         <>
-            <h1 className="PageTitle">Događaji</h1>
-            <SearchBar searchType="Search events..." onInputChange={searchInputHandler}/>
+            <PageTitle>Događaji</PageTitle>
+            <SearchBar searchType="Search events..." onInputChange={searchInputHandler} isDisabled={events.length === 0 ? true : false} />
             {events.length === 0 ? <Loader /> : <CardsGrid>{eventCards}</CardsGrid>}    
         </>
     );

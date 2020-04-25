@@ -1,23 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './More.scss';
+import { SectionMore, SectionMoreInner, SectionMoreContainerDescription, SectionMoreAbout, SectionMoreCards } from './MoreStyle';
+import { Btn } from '../../lib/styles/GeneralStyles';
 
 // Components
 import Card from '../Card/Card';
 
 // Images
-import About from '../../assets/img/about.jpg';
-import Speakers from '../../assets/img/speakers.jpg';
-import Calendar from '../../assets/img/calendar.jpg';
-import Partner from '../../assets/img/partner.jpg';
+import about from '../../assets/img/about.jpg';
+import speakers from '../../assets/img/speakers.jpg';
+import calendar from '../../assets/img/calendar.jpg';
+import partner from '../../assets/img/partner.jpg';
 
 
 const More = () => {
     return (
-        <section className="SectionMore">
-            <div className="SectionMore__Inner">
-                <div className="SectionMore__ContainerDescription">
-                    <p className="SectionMore__About">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <SectionMore>
+            <SectionMoreInner>
+                <SectionMoreContainerDescription>
+                    <SectionMoreAbout>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Eius maxime natus, qui doloremque aliquid labore corporis 
                     modi non amet repellat expedita fugiat eum, aut libero totam 
                     veniam sed ullam ut tenetur. Impedit ut doloribus perferendis 
@@ -25,17 +25,17 @@ const More = () => {
                     enim consequatur repellendus, delectus earum iste dolorem eius 
                     sequi asperiores beatae laboriosam doloremque sit. Consequuntur 
                     laborum dolores architecto dolorem iusto hic tenetur. Nobis, omnis 
-                    dolores vero sed.</p>
-                    <Link className="Btn">Saznaj više</Link>
-                </div>
-                <div className="SectionMore__Cards">
-                    <Card image={About} altText="About">O tjednu karijera</Card>
-                    <Card image={Speakers} altText="Speakers">Izlagači</Card>
-                    <Card image={Calendar} altText="Calendar">Raspored događanja</Card>
-                    <Card image={Partner} altText="Partner">Partneri</Card>
-                </div>
-            </div>
-        </section>
+                    dolores vero sed.</SectionMoreAbout>
+                    <Btn>Saznaj više</Btn>
+                </SectionMoreContainerDescription>
+                <SectionMoreCards>
+                    <Card image={about} altText="About">O tjednu karijera</Card>
+                    <Card image={speakers} altText="Speakers">Izlagači</Card>
+                    <Card image={calendar} altText="Calendar">Raspored događanja</Card>
+                    <Card image={partner} altText="Partner">Partneri</Card>
+                </SectionMoreCards>
+            </SectionMoreInner>
+        </SectionMore>
     );
 }
 
