@@ -32,7 +32,7 @@ const InfoBox = props => {
             {props.isTypeEvent ? displayInformationSection(props) : null}
             <p className="InfoBox__About">{props.about}</p>
             <div className="InfoBox__Footer">
-                <Link className="InfoBox__Btn-Join">{props.link}</Link>
+                <Link className="InfoBox__Btn-Join" to={props.link}>{props.link}</Link>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const HeaderMain = styled.header `
     width: 100%;
@@ -20,17 +21,15 @@ export const HeaderMainInner = styled.div `
     margin: 0 auto;
 `;
 
-export const LogoContainer = styled.a.attrs(props => ({
-    href: props.to
-})) `
+export const LogoContainer = styled(NavLink) `
+    to: ${props => props.to};
     width: 80px;
     height: 70px;
 `;
 
-export const LogoContainerImage = styled.img.attrs(props => ({ 
-    src: props.logoImg,
-    alt: 'Logo' 
-})) `
+export const LogoContainerImage = styled.img `
+    src: ${props => props.src};
+    alt: 'Logo';
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -57,9 +56,8 @@ export const HeaderMainNavListItem = styled.li `
     }
 `;
 
-/* export const HeaderMainNavLink = styled(NavLink).attrs(props => ({
-    to: props.to
-})) `
+export const HeaderMainNavLink = styled(NavLink) `
+    to: ${props => props.to};
     font-size: 17px;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -69,7 +67,7 @@ export const HeaderMainNavListItem = styled.li `
         color: #c59613;
     }
 
-    &:active {
+    &.active {
         color: #c59613;
     }
-`; */
+`;

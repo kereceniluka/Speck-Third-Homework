@@ -1,6 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { HeaderMain, HeaderMainInner, LogoContainer, LogoContainerImage, HeaderMainNav, HeaderMainNavList, HeaderMainNavListItem } from './HeaderStyle';
+import { HeaderMain, HeaderMainInner, LogoContainer, LogoContainerImage, HeaderMainNav, HeaderMainNavList, HeaderMainNavListItem, HeaderMainNavLink } from './HeaderStyle';
 
 // Assets
 import logo from '../../assets/img/logo.png';
@@ -17,21 +16,21 @@ const Header = () => {
         <HeaderMain>
             <HeaderMainInner>
                 <LogoContainer to="/">
-                    <LogoContainerImage logoImg={logo} />
+                    <LogoContainerImage src={logo} />
                 </LogoContainer>
                 <HeaderMainNav>
                     <HeaderMainNavList>
                         <HeaderMainNavListItem>
-                            <NavLink to="/speakers" activeStyle={{ color: '#9e7911' }}>{links.speakers}</NavLink>
+                            <HeaderMainNavLink to="/speakers">{links.speakers}</HeaderMainNavLink>
                         </HeaderMainNavListItem>
                         <HeaderMainNavListItem>
-                            <NavLink to="/events" activeStyle={{ color: '#9e7911' }}>{links.events}</NavLink>
+                            <HeaderMainNavLink to="/events">{links.events}</HeaderMainNavLink>
                         </HeaderMainNavListItem>
                         <HeaderMainNavListItem>
-                            <NavLink to="/contact" activeStyle={{ color: '#9e7911' }}>{links.contact}</NavLink>
+                            <HeaderMainNavLink to="/contact">{links.contact}</HeaderMainNavLink>
                         </HeaderMainNavListItem>
                         <HeaderMainNavListItem>
-                            <NavLink to="/sign-in" activeStyle={{ color: '#9e7911' }}>{links.sign_in}</NavLink>
+                            <HeaderMainNavLink to="/sign-in">{links.sign_in}</HeaderMainNavLink>
                         </HeaderMainNavListItem>
                     </HeaderMainNavList>
                 </HeaderMainNav>
