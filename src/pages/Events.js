@@ -10,8 +10,8 @@ import Loader from '../components/LoadingIcon/LoadingIcon';
 // Assets
 import eventIcon from '../assets/img/event-icon.png';
 
-// Data
-import eventsData from '../lib/mock/events';
+// Services
+import { getEvents } from '../services/events';
 
 const Events = () => {
 
@@ -20,9 +20,8 @@ const Events = () => {
     
 
     useEffect(() => {
-        setTimeout(() => {
-            setEvents(eventsData);
-        }, 1000);
+        getEvents(localStorage.getItem('token'))
+            .then(res => setEvents(res.events));
     }, []);
 
 
@@ -33,7 +32,7 @@ const Events = () => {
     const filteredEventCards = events.filter(event => event.title.toLowerCase().startsWith(search.toLowerCase()));
 
     const eventCards = filteredEventCards.map(eventCard => <InfoBox
-                                                                key={eventCard.id}
+                                                                key={eventCard._id}
                                                                 isTypeEvent={true}
                                                                 icon={eventIcon}
                                                                 title={eventCard.title} 
@@ -45,7 +44,7 @@ const Events = () => {
 
     return (
         <>
-            <PageTitle>Događaji</PageTitle>
+            <PageTitle>Events</PageTitle>
             <SearchBar searchType="Search events..." onInputChange={searchInputHandler} isDisabled={events.length === 0 ? true : false} />
             {events.length === 0 ? <Loader /> : <CardsGrid>{eventCards}</CardsGrid>}    
         </>

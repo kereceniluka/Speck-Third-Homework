@@ -10,9 +10,8 @@ import SearchBar from '../components/SearchBar/SearchBar';
 // Assets
 import speakersIcon from '../assets/img/speakers-icon.png';
 
-// Data
-import speakersData from '../lib/mock/speakers';
-
+// Services
+import { getSpeakers } from '../services/speakers';
 
 const Speakers = () => {
 
@@ -21,9 +20,8 @@ const Speakers = () => {
     
 
     useEffect(() => {
-        setTimeout(() => {
-            setSpeakers(speakersData);
-        }, 1000);
+        getSpeakers(localStorage.getItem('token'))
+            .then(res => setSpeakers(res.speakers));
     }, []);
 
 
@@ -34,7 +32,7 @@ const Speakers = () => {
     const filteredSpeakerCards = speakers.filter(speaker => speaker.title.toLowerCase().startsWith(search.toLowerCase()));
 
     const speakerCards = filteredSpeakerCards.map(speakerCard => <InfoBox 
-                                                                    key={speakerCard.id}
+                                                                    key={speakerCard._id}
                                                                     isTypeEvent={false}
                                                                     icon={speakersIcon}
                                                                     title={speakerCard.title}
@@ -43,7 +41,7 @@ const Speakers = () => {
 
     return (
         <>
-            <PageTitle>Sudionici</PageTitle>
+            <PageTitle>Speakers</PageTitle>
             <SearchBar searchType="Search speakers..." onInputChange={searchInputHandler} isDisabled={speakers.length === 0 ? true : false} /> 
             {speakers.length === 0 ? <Loader /> : <CardsGrid>{speakerCards}</CardsGrid>}
         </>
